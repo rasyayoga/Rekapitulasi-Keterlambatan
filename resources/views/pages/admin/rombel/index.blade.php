@@ -11,6 +11,11 @@
         {{ Session::get('success') }}
     </div>
     @endif
+    @if (Session::get('error'))
+    <div class="alert alert-success" role="alert">
+        {{ Session::get('error') }}
+    </div>
+    @endif
     <div class="handle">
         <a href="{{ route('rombel.create') }}">
             <button type="button" class="btn btn-info mb-4">Tambah Data</button>

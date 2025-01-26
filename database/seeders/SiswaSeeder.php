@@ -14,8 +14,8 @@ class SiswaSeeder extends Seeder
     public function run(): void
     {
         Student::create([
-            'nis' => '12209242',
-            'name' => 'Muhammad Irsyad N',
+            'nis' => '12209185',
+            'name' => 'Muhammad Rasya Yoga F',
             'rombel_id' => '1',
             'rayon_id' => '1'
         ]);

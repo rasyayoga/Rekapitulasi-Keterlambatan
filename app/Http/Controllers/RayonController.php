@@ -39,6 +39,12 @@ class RayonController extends Controller
             'rayon' => 'required',
             'user_id' => 'required'
         ]);
+        $existTeacher = Rayon::where('user_id', $request->user_id)->first();
+
+        //kondisi jika guru sudah memegang rayon maka tidak bisa memegang rayon lain
+        if ($existTeacher) {
+            return redirect()->route('rayon.home')->with('error', 'Guru sudah memiliki rayon');
+        }
 
         Rayon::create($request->all());
 
